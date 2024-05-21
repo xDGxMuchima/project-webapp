@@ -21,3 +21,13 @@ jobs:
           context: .
           push: true
           tags: gmuchima/docker-week10:final-project
+
+      - name: Analyze with CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: python
+          
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+        with:
+         category: "/language:${{matrix.language}}"
