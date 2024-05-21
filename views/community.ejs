@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชุมชน | อาสาสมัครไทย</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <img class="logo" src="img/logo.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">หน้าแรก</a></li>
+                <li><a href="/activity">กิจกรรม</a></li>
+                <li><a href="/aboutUs">เกี่ยวกับเรา</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+                <li><a href="/community">ชุมชน</a></li>
+            </ul>
+        </nav>
+        <% if (loggedIn) { %>
+            <a class="cta" href="/logout"><button>ออกจากระบบ</button></a>
+            <% }else{ %>
+                <a class="cta" href="/login"><button>เข้าสู่ระบบ</button></a>
+                <%}%>
+    </header>
+
+    <!-- Section -->
+    <section>
+        <div class="container-community">
+            <h1 class="blue-text">ชุมชนอาสา</h1>
+            <form action="/review" method="POST">
+                <button class="review-button" >โพสต์</button>
+            </form>
+        </div>
+        <div class="container-act">
+                
+            <% if (revs.length > 0) { %>
+                <ul>
+                  <% revs.forEach(rev => { %>
+                    <div class="container-review">
+                    <li><h3 class="margin-text"><u>มนุษย์</u></h3><div class="size"><%= rev.rev_chat %> </div> <br><br><br>
+                    <li><h3 class="margin-text" style="text-align: right;"><p><%= rev.rev_date %> เวลา : <%= rev.rev_time %> </p></h3>
+                        
+                    </div><br>
+                    <% }); %>
+                
+                </ul>
+              <% } else { %>
+                <p>No Chat found.</p>
+              <% } %>
+                   
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                       
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>website</h4>
+                    <ul>
+                        <li><a href="#">กิจกรรม</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">ชุมชน</a></li>
+                    </ul>
+                </div>
+          
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instragram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา | อาสาสมัครไทย</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <img class="logo" src="img/logo.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">หน้าแรก</a></li>
+                <li><a href="/activity">กิจกรรม</a></li>
+                <li><a href="/aboutUs">เกี่ยวกับเรา</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+                <li><a href="/community">ชุมชน</a></li>
+            </ul>
+        </nav>
+        <% if (loggedIn) { %>
+            <a class="cta" href="/logout"><button>ออกจากระบบ</button></a>
+            <% }else{ %>
+                <a class="cta" href="/login"><button>เข้าสู่ระบบ</button></a>
+                <%}%>
+    </header>
+
+    <!-- Section -->
+    <section class="container-contact">
+        <div class="content">
+            <h1 class="h1-con"><b>ติดต่อเรา</b></h1>
+            <br />
+            <h5 class="h5-con"><b>Email Address</b></h5>
+            <br />
+            <h6 class="h6-con">
+                wannisa.fakt@bumail.net <br>
+                pakhwan.pimt@bumail.net <br>
+                muchima.jitw@bumail.net <br>
+                naruebet.klam@bumail.net <br>
+                chayuda.phoo@bumail.net <br>
+                kitipipat.kuna@bumail.net
+            </h6>
+        </div>
+        <div>
+            <img class="con-pic-small" src="img/con-pic.jpg" alt="con-pic">
+        </div>
+    </section>
+    <section class="container-contact">
+        <div class="content-map">
+            <h5 class="h5-con"><b>Main Office</b></h5>
+            <br />
+            <h6 class="h6-con">
+                9/1 หมู่ 5 ถนนพหลโยธิน ต.คลองหนึ่ง อ.คลองหลวง ปทุมธานี 12120
+            </h6>
+        </div>
+        <div id="map">
+            <iframe class="map-right"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.6371338119693!2d100.61278967509554!3d14.039510686383025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e2801cc4ec2aff%3A0xbfec6d0816ab0b14!2sBangkok%20University!5e0!3m2!1sen!2sth!4v1695730757811!5m2!1sen!2sth"
+                width="100%" height="330px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    </section> 
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>website</h4>
+                    <ul>
+                        <li><a href="#">กิจกรรม</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">ชุมชน</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instragram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

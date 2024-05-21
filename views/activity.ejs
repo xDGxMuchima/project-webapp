@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>กิจกรรม | อาสาสมัครไทย</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <img class="logo" src="img/logo.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">หน้าแรก</a></li>
+                <li><a href="/activity">กิจกรรม</a></li>
+                <li><a href="/aboutUs">เกี่ยวกับเรา</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+                <li><a href="/community">ชุมชน</a></li>
+            </ul>
+        </nav>
+        <% if (loggedIn) { %>
+            <a class="cta" href="/logout"><button>ออกจากระบบ</button></a>
+            <% }else{ %>
+                <a class="cta" href="/login"><button>เข้าสู่ระบบ</button></a>
+                <%}%>
+    </header>
+
+    <!-- Section -->
+    <section>
+        <div class="bg-blue">
+            <div class="container-act">
+                <h1>กิจกรรม</h1>
+                <!--  -->
+                <form action="/post" method="POST">
+                    <button class="activity-button" >โพสต์</button>
+                </form>
+                <br>
+                <div>
+
+                    <!-- <div class="gallery-section"> -->
+                            
+                            <% if (posts.length > 0) { %>
+                                <ul>
+                                  <% posts.forEach(post => { %>
+                                    <div class="container-activity">
+                                    <li><h3 class="margin-bottom"><u>ชื่อกิจกรรม</u></h3><%= post.act_name %> <br><br><h3 class="margin-bottom"><u>วันที่จัดกิจกรรม</u></h3>  <%= post.act_date %> <br><br> 
+                                        <h3 class="margin-bottom"><u>รายละเอียดกิจกรรม</u></h3><%= post.act_info %> <br><br> 
+                                        <h3 class="margin-bottom"><u>ที่อยู่</u></h3><%= post.act_addr %> <br><br>  
+                                        <h3 class="margin-bottom"><u>เวลา</u></h3><%= post.act_time %> <br><br> 
+                                        <h3 class="margin-bottom"><u>ข้อมูลติดต่อ</u></h3><%= post.act_contact %> <br><br> 
+                                        <h3 class="margin-bottom"><u>ชื่อผู้จัดหรือบริษัท</u></h3><%= post.act_company_name %> <br><br> 
+                                        <h3 class="margin-bottom"><u>ข้อมูลเพิ่มเติม</u></h3><%= post.act_moreinfo %></li>
+                                    </div><br>
+                                    <% }); %>
+                                
+                                </ul>
+                              <% } else { %>
+                                <p>No upcoming activities found.</p>
+                              <% } %>
+                        
+
+
+                    <!-- </div> -->
+                </div>
+            </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>website</h4>
+                    <ul>
+                        <li><a href="#">กิจกรรม</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">ชุมชน</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instragram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

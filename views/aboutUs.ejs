@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกี่ยวกับเรา | อาสาสมัครไทย</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <img class="logo" src="img/logo.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">หน้าแรก</a></li>
+                <li><a href="/activity">กิจกรรม</a></li>
+                <li><a href="/aboutUs">เกี่ยวกับเรา</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+                <li><a href="/community">ชุมชน</a></li>
+            </ul>
+        </nav>
+        <% if (loggedIn) { %>
+            <a class="cta" href="/logout"><button>ออกจากระบบ</button></a>
+            <% }else{ %>
+                <a class="cta" href="/login"><button>เข้าสู่ระบบ</button></a>
+                <%}%>
+    </header>
+
+    <!-- Section -->
+    <section class="container-contact">
+        <div class="content">
+            <h1 class="h1-about"><b>เกี่ยวกับเรา</b></h1>
+            <br />
+            <h6 class="h6-about">
+                เว็บไซต์อาสาสมัครไทยเป็นเว็บไซต์ที่ให้พื้นที่ในการทำจิตอาสา<br>
+                โดยให้ผู้จัดกิจกรรมสามารถมาลงหาอาสาสมัคร<br>
+                ส่วนผู้อยากเป็นอาสาสมัครก็สามารถเข้ามาดูกิจกรรมที่ตัวเองสนใจได้
+            </h6>
+        </div>
+        <div>
+            <img class="con-pic-small" src="img/aboutus.jpg" alt="con-pic">
+        </div>
+    </section>
+
+    <section class="bg-blue">
+        <div class="container-about">
+            <h1>สมาชิก</h1>
+        </div>
+        <div class="container-about">
+            <div class="column">
+              <img src="img/members/nook.jpg" alt="Image 1" class="avatar">
+              <p>ธัญนภัทร์ คชพงษ์</p>
+            </div>
+            <div class="column">
+              <img src="img/members/kitpiphat.jpg" alt="Image 2" class="avatar">
+              <p>กิตติ์พิภัทร์ คุณาพันธ์</p>
+            </div>
+            <div class="column">
+              <img src="img/members/naruebet.jpg" alt="Image 3" class="avatar">
+              <p>นฤเบศร  กล่ำเสือ</p>
+            </div>
+          </div>
+          <div class="container-about">
+            <div class="column">
+              <img src="img/members/pakhwan.jpg" alt="Image 4" class="avatar">
+              <p>พาขวัญ พิมพ์ทนต์</p>
+            </div>
+            <div class="column">
+              <img src="img/members/muchima.jpg" alt="Image 5" class="avatar">
+              <p>มัชฌิมา จิตรวัฒนะ</p>
+            </div>
+            <div class="column">
+              <img src="img/members/chayuda.jpg" alt="Image 6" class="avatar">
+              <p>ชยุดา​ ภู่​เทียน</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        
+                        
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>website</h4>
+                    <ul>
+                        <li><a href="#">กิจกรรม</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">ชุมชน</a></li>
+                    </ul>
+                </div>
+               
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instragram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เข้าสู่ระบบ | อาสาสมัครไทย</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="validation.js"></script>
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <img class="logo" src="img/logo.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">หน้าแรก</a></li>
+                <li><a href="/activity">กิจกรรม</a></li>
+                <li><a href="/aboutUs">เกี่ยวกับเรา</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+                <li><a href="/community">ชุมชน</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- Section -->
+    <section>
+
+        <div class="login-form">
+            <h1 class="login_head">เข้าสู่ระบบ</h1>
+            <br />
+
+        </div>
+        <center>
+            <div>
+                <div>
+                    <form action="/user/login" method="POST">
+                        <input type="text" name="email" class="form-input" id="username" placeholder="อีเมล"><br><br>
+                        <input type="password" name="password" class="form-input" id="pass" placeholder="รหัสผ่าน"><br><br>
+                        <br />
+                        <br />
+                        <a><button class="login-button">เข้าสู่ระบบ</button></a>
+                    </form>
+                </div>               
+                <br>
+                <div>
+                    <a href="/register"><button class="login_regis">สมัครสมาชิก</button></a>
+                </div>
+            </div>
+        </center>
+    </section>
+
+    <br><br><br><br><br><br>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>website</h4>
+                    <ul>
+                        <li><a href="#">กิจกรรม</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">ชุมชน</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instragram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

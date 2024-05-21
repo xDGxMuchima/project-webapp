@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สมัครสมาชิก | อาสาสมัครไทย</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <!-- Navbar -->
+        <img class="logo" src="img/logo.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">หน้าแรก</a></li>
+                <li><a href="/activity">กิจกรรม</a></li>
+                <li><a href="/aboutUs">เกี่ยวกับเรา</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+                <li><a href="/community">ชุมชน</a></li>
+            </ul>
+        </nav>
+        <a class="cta" href="/login"><button>เข้าสู่ระบบ</button></a>
+    </header>
+
+    <!-- Section -->
+    <section>
+        
+        <div class="regis_container">
+
+            <!--  -->
+            <form action="/user/register" method="POST">
+                
+                <!--  -->
+
+                <h1>สมัครสมาชิก</h1>
+                <br/>
+
+                <div class="form-group">
+                    <label class="form-label" for="username">ชื่อผู้ใช้ :</label>
+                    <input type="text" id="username" name="username" placeholder="ชื่อผู้ใช้" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="pass">รหัสผ่าน :</label>
+                    <input type="password" id="pass" name="password" placeholder="รหัสผ่าน" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="fullname">ชื่อ/นามสกุล :</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="ชื่อ/นามสกุล" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="birthday">วันเกิด:</label>
+                    <input type="Date" id="birthday" name="birthday" placeholder="วันเกิด" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="address">ที่อยู่ :</label>
+                    <input type="text" id="address" name="address" placeholder="ที่อยู่" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="tel">เบอร์โทร :</label>
+                    <input type="text" id="tel" name="tel" placeholder="เบอร์โทร" class="form-input" />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label" for="email">อีเมล :</label>
+                    <input type="text" id="email" name="email" placeholder="อีเมล" class="form-input" />
+                </div>
+
+                <input type="submit" value="ยืนยัน" id="submit" />
+            </form>
+        </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>website</h4>
+                    <ul>
+                        <li><a href="#">กิจกรรม</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">ชุมชน</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instragram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

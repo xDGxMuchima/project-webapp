@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก | อาสาสมัครไทย</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body class="body-color">
+    <header>
+        <!-- Navbar -->
+        <img class="logo" src="img/logo.png" alt="logo">
+        <nav>
+            <ul class="nav__links">
+                <li><a href="/">หน้าแรก</a></li>
+                <li><a href="/activity">กิจกรรม</a></li>
+                <li><a href="/aboutUs">เกี่ยวกับเรา</a></li>
+                <li><a href="/contact">ติดต่อเรา</a></li>
+                <li><a href="/community">ชุมชน</a></li>
+
+            </ul>
+
+        </nav>
+        <% if (loggedIn) { %>
+            <a class="cta" href="/logout"><button>ออกจากระบบ</button></a>
+            <% }else{ %>
+                <a class="cta" href="/login"><button>เข้าสู่ระบบ</button></a>
+                <%}%>
+    </header>
+
+    <!-- Section -->
+    <section>
+        <form action="/post" method="POST">
+            <div class="image-container">
+                <img class="imgbg" src="img/bghome.png" alt="imgbg" />
+                <h1 class="overlay-text">ช่วยเหลือคนไทยด้วยกัน</h1>
+                <button class="overlay-button" >โพสต์</button>
+            </div>
+        </form>
+        <div class="bg-blue">
+            <div class="container-act">
+                <h1>กิจกรรมแนะนำ</h1>
+                <!--  -->
+                <div>
+
+                    <div class="gallery-section">
+                        <div class="gallery-item">
+                            <img src="img/indexpic1.jpg" alt="Image 1" class="gallery-image">
+
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/indexpic2.jpg" alt="Image 2" class="gallery-image">
+
+                        </div>
+                        <div class="gallery-item">
+                            <img src="img/indexpic3.jpg" alt="Image 3" class="gallery-image">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="container-seeall">
+                <button class="seeAll" onclick="window.location.href='/activity'">ดูทั้งหมด</button>
+            </div>
+    </section>
+
+    <section class="bg-white">
+        <h1>Who we are</h1>
+        <div class="container-index">
+            <div>
+                <img class="index-pic-small" src="img/con-pic.jpg" alt="index-pic">
+            </div>
+            <div class="content">
+                <br />
+                <h6 class="h6-about">
+                    เว็บไซต์อาสาสมัครไทยเชื่อว่าสังคมของเราเต็มไปด้วยน้ำใจ<br>
+                    เราทุกคนมีต้นทุนอันสร้างสรรค์นี้ ไม่ว่าวัยไหน<br>
+                    หรือมีหน้าที่การงานอะไร<br>
+                    ต่างคนต่างต้องการอยู่ร่วมกันในสังคมที่เท่าเทียม<br>
+                    และมีส่วนร่วมในการแก้ไขปัญหาของสังคมทุกๆ<br>
+                    คนจึงสามารถเป็นอาสาสมัครได้<br>
+                    ใช้กำลังความสามารถและใช้เวลาอันมีค่า<br>เพื่อทำสิ่งที่มีคุณค่าต่อตัวเราและมีคุณค่าต่อสังคมหากคุณคือ
+                    “อาสา”
+                </h6>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="bg-blue">
+        <div class="container-act">
+            <h1>What we do</h1>
+
+            <div class="gallery-section">
+                <div class="gallery-item">
+                    <img src="img/pic1.png" alt="Image 1" class="gallery-image">
+                    <p class="image-text">เว็บไซต์สำหรับคนชอบช่วยเหลือ </p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/pic2.png" alt="Image 2" class="gallery-image">
+                    <p class="image-text">เว็บไซต์ที่สามารถจัดกิจกรรมจิตอาสาได้</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="img/pic3.png" alt="Image 3" class="gallery-image">
+                    <p class="image-text">เว็บไซต์ที่สมารถสร้างรอยยิ้มให้กับผู้คน</p>
+                </div>
+                <!-- Repeat for additional images -->
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col">
+                    <h4>company</h4>
+                    <ul>
+                        <li><a href="#">about us</a></li>
+                        <li><a href="#">our services</a></li>
+                        <li><a href="#">privacy policy</a></li>
+                        
+                    </ul>
+                </div>
+               
+                <div class="footer-col">
+                    <h4>website</h4>
+                    <ul>
+                        <li><a href="#">กิจกรรม</a></li>
+                        <li><a href="#">เกี่ยวกับเรา</a></li>
+                        <li><a href="#">ติดต่อเรา</a></li>
+                        <li><a href="#">ชุมชน</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>follow us</h4>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Instragram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
