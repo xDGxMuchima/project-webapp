@@ -10,11 +10,19 @@
       "use": "@vercel/static"
     },
     {
-      "src": "pages/**/*.js",
+      "src": "views/**/*.js",
       "use": "@vercel/node"
     },
     {
-      "src": "api/**/*.js",
+      "src": "controllers/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "middleware/**/*.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "models/**/*.js",
       "use": "@vercel/node"
     }
   ],
