@@ -4,6 +4,8 @@ const ejs = require('ejs')
 const mongoose = require('mongoose')
 const expressSession = require('express-session')
 const flash = require('connect-flash')
+const port = process.env.PORT || 3000;
+
 
 // MongoDB Connection
 mongoose.connect('mongodb+srv://muchimajitw:Gong13138@cluster0.bdkbg2a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
@@ -64,6 +66,6 @@ app.get('/community', communityController)
 app.get('/activity', activityController)
 app.get('/aboutUs', aboutUsController)
 
-app.listen(3000, () => {
-    console.log("App listening on port 3000")
-})
+app.listen(port, () => {
+  console.log(`Server running on port ${port}`);
+});
