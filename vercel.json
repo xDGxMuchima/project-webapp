@@ -6,14 +6,6 @@
       "use": "@vercel/node" 
     },
     {
-      "src": "package.json",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "public/**/*",
-      "use": "@vercel/static"
-    },
-    {
       "src": "views/**/*.js",
       "use": "@vercel/node"
     },
@@ -23,10 +15,6 @@
     },
     {
       "src": "middleware/**/*.js",
-      "use": "@vercel/node"
-    },
-    {
-      "src": "models/**/*.js",
       "use": "@vercel/node"
     }
   ],
