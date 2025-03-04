@@ -1,4 +1,5 @@
 {
+  "type": "module"
   "name": "nodejs-login-register",
   "version": "1.0.0",
   "description": "",
