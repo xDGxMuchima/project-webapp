@@ -2,46 +2,18 @@ const express = require('express')
 const app = express()
 const ejs = require('ejs')
 const mongoose = require('mongoose')
-const session = require('express-session')
-const MongoStore = require('connect-mongodb-session')(session)
+const expressSession = require('express-session')
 const flash = require('connect-flash')
-
 const port = process.env.PORT || 3000;
-const MONGO_URI = 'mongodb+srv://muchimajitw:Gong13138@cluster0.bdkbg2a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+
 
 // MongoDB Connection
-mongoose.connect(MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('MongoDB Connected'))
-    .catch(err => console.error('MongoDB connection error:', err));
+mongoose.connect('mongodb+srv://muchimajitw:Gong13138@cluster0.bdkbg2a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+    useNewUrlParser: true
+})
 
-// ใช้ MongoDB เก็บ session แทน
-const store = new MongoStore({
-    uri: MONGO_URI,
-    collection: 'sessions'
-});
-
-app.use(session({
-    secret: "node secret",
-    resave: false,
-    saveUninitialized: true,
-    store: store,
-    cookie: { maxAge: 1000 * 60 * 60 * 24 } // 1 วัน
-}));
-
-app.use(express.static('public'))
-app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
-app.use(flash())
-
-// Middleware สำหรับเก็บค่า session ไว้ใน global variable
-app.use("*", (req, res, next) => {
-    global.loggedIn = req.session.userId || null;
-    global.aa = "win";
-    next();
-});
-
-app.set('view engine', 'ejs')
-
+global.loggedIn = null
+global.aa = null
 // Controllers
 const indexController = require('./controllers/indexController')
 const loginController = require('./controllers/loginController')
@@ -63,7 +35,21 @@ const aboutUsController = require('./controllers/aboutUsController')
 const redirectIfAuth = require('./middleware/redirectIfAuth')
 const authMiddleware = require('./middleware/authMiddleware')
 
-// Routes
+
+app.use(express.static('public'))
+app.use(express.json())
+app.use(express.urlencoded())
+app.use(flash())
+app.use(expressSession({
+    secret: "node secret"
+}))
+app.use("*", (req, res, next) => {
+    loggedIn = req.session.userId
+    aa = "win"
+    next()
+})
+app.set('view engine', 'ejs')
+
 app.get('/', indexController)
 app.get('/home', authMiddleware, homeController)
 app.get('/login', redirectIfAuth, loginController)
@@ -80,5 +66,6 @@ app.get('/community', communityController)
 app.get('/activity', activityController)
 app.get('/aboutUs', aboutUsController)
 
-// ใช้ module.exports แทน app.listen() เพื่อให้รองรับ Vercel
-module.exports = app;
+app.listen(port, () => {
+  console.log(Server running on port ${port});
+});
