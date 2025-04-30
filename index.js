@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://muchimajitw:Gong13138@cluster0.bdkbg2a.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://muchimajitw:Gong_131380@arsa.bws4r5h.mongodb.net/?retryWrites=true&w=majority&appName=Arsa', {
     useNewUrlParser: true
 })
 
